@@ -1,0 +1,124 @@
+/* Chatbox */
+#chatbox {
+  position: fixed;
+  bottom: 80px;
+  right: 30px;
+  width: 320px;
+  height: 500px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: slideUp 0.3s ease;
+}
+
+/* Show/Hide Smoothly */
+#chatbox.active {
+  display: flex;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+/* Header */
+.chatbox-header {
+  background: #4a90e2;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chatbox-header h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.close-btn {
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.2s;
+}
+.close-btn:hover {
+  color: #ff4d4d;
+}
+
+/* Messages */
+.chatbox-messages {
+  flex: 1;
+  padding: 15px;
+  background: #f5f6fa;
+  overflow-y: auto;
+}
+
+.bot-msg {
+  background: #e1ecf7;
+  color: #333;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 80%;
+  margin-bottom: 10px;
+}
+
+/* Input Area */
+.input-area {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  background: #fafafa;
+}
+
+.input-area input {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 10px 15px;
+  outline: none;
+}
+
+.input-area button {
+  background: #4a90e2;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  margin-left: 10px;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  transition: 0.3s;
+}
+.input-area button:hover {
+  background: #357ab7;
+}
+
+/* Floating Toggle Button */
+.toggle > button {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  height: 65px;
+  width: 65px;
+  border-radius: 50%;
+  background: #4a90e2;
+  border: none;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.toggle > button:hover {
+  transform: scale(1.1);
+  background: #357ab7;
+}
+
+.emoji {
+  font-size: 32px;
+  color: white;
+}
